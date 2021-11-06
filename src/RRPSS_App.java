@@ -16,12 +16,29 @@ public class RRPSS_App {
 		orderController = new OrderController();
 		staffController = new StaffController();
 		tableController = new TableController();
+		
+		MenuItem mD = new MainDish("","","0");
+		MenuItem dR = new Drinks("","","0");
+		MenuItem dE = new Dessert("","","0");
+		MenuItem sD = new SideDish("","","0");
+		
+		for(MenuItem mI : new MenuItem[] {
+				new MainDish("","","0"),
+				new Drinks("","","0"),
+				new Dessert("","","0"),
+				new SideDish("","","0")
+		})
+			System.out.println(mI.getClass().getName());
+		
+		
+		
+		
 		int choice;
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Restaurant Reservation and Point of Sale System (RRPSS)");
 		System.out.println("========================================================");
-		
+
 		
 		int ordernum = 1;
 		
@@ -100,6 +117,9 @@ public class RRPSS_App {
 			System.out.println();
 		}
 		System.out.println();
+		
+
+		
 	}
 
 	
